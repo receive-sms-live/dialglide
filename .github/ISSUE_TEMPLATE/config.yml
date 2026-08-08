@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private security report
+    url: https://github.com/receive-sms-live/dialglide/security/advisories/new
+    about: Report vulnerabilities privately and do not include real user data.
+  - name: Product support
+    url: https://receive-smss.live/tools/dialglide/support/
+    about: Get help using the published extension.

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DialGlide contact detection demo</title>
+    <link rel="stylesheet" href="../dist/content/content.css">
+    <style>
+      body { max-width: 780px; margin: 60px auto; padding: 0 24px; color: #172033; font: 16px/1.7 system-ui, sans-serif; }
+      section { margin: 20px 0; padding: 22px; border: 1px solid #dce3ee; border-radius: 14px; }
+      h1 { font-size: 32px; }
+      .muted { color: #66758c; }
+      html[dir="rtl"] body { font-family: system-ui, "Noto Sans Arabic", sans-serif; }
+    </style>
+  </head>
+  <body>
+    <h1 id="page-title">Customer contacts</h1>
+    <section>
+      <p id="arabic-contact">Arabic digits: ٠٢٠ ٧٩٤٦ ٠٩٥٨</p>
+      <p id="london-contact">London support: +44 20 7946 0958</p>
+      <p id="us-contact">US office: +1 (202) 555-0147</p>
+    </section>
+    <section class="muted">
+      <p id="non-phone-note">Ignored automatically: date 2026-08-04, order ID 202608041234, and time 12:45.</p>
+    </section>
+    <section id="dynamic-section"><p id="dynamic-note">Live CRM contacts are detected as they appear.</p></section>
+    <script src="test-page-localize.js"></script>
+    <script src="mock-chrome.js"></script>
+    <script src="../dist/content.js"></script>
+    <script src="dynamic-content.js"></script>
+  </body>
+</html>

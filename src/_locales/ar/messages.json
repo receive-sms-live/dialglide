@@ -1,0 +1,10 @@
+{
+  "extensionName": { "message": "DialGlide – النقر للاتصال من صفحات الويب" },
+  "extensionDescription": { "message": "اكتشف أرقام الهاتف على صفحات الويب واتصل بنقرة واحدة أو أرسل رسالة أو انسخ الرقم، مع معالجة محلية على جهازك." },
+  "actionTitle": { "message": "فتح DialGlide" },
+  "commandOpen": { "message": "فتح اللوحة الجانبية لـ DialGlide" },
+  "menuCall": { "message": "اتصل بـ %s باستخدام DialGlide" },
+  "menuMessage": { "message": "أرسل رسالة إلى %s باستخدام DialGlide" },
+  "menuCopy": { "message": "نسخ رقم الهاتف بعد تنسيقه" },
+  "menuOpen": { "message": "فتح DialGlide" }
+}

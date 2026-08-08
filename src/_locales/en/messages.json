@@ -1,0 +1,10 @@
+{
+  "extensionName": { "message": "DialGlide – Universal Click-to-Call" },
+  "extensionDescription": { "message": "Detect phone numbers on webpages and click to call, message, or copy them with your preferred app—processed locally." },
+  "actionTitle": { "message": "Open DialGlide" },
+  "commandOpen": { "message": "Open DialGlide side panel" },
+  "menuCall": { "message": "Call %s with DialGlide" },
+  "menuMessage": { "message": "Message %s with DialGlide" },
+  "menuCopy": { "message": "Copy formatted phone number" },
+  "menuOpen": { "message": "Open DialGlide" }
+}

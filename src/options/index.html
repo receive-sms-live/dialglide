@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DialGlide Settings</title>
+    <link rel="stylesheet" href="../shared/ui.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">DG</div>
+        <div>
+          <p class="brand-name">DialGlide</p>
+          <p class="brand-tagline" data-i18n="tagline"></p>
+        </div>
+      </div>
+      <span class="pill" data-i18n="privateLocal"></span>
+    </header>
+
+    <main class="settings-shell">
+      <div class="page-heading">
+        <h1 data-i18n="settingsTitle"></h1>
+        <p data-i18n="settingsIntro"></p>
+      </div>
+
+      <form id="settings-form">
+        <section class="settings-card">
+          <div class="card-heading">
+            <span class="step">01</span>
+            <div><h2 data-i18n="language"></h2></div>
+          </div>
+          <div class="field-grid two">
+            <div class="field">
+              <label for="locale" data-i18n="language"></label>
+              <select id="locale">
+                <option value="auto" data-i18n="automatic"></option>
+                <option value="en" data-i18n="english"></option>
+                <option value="ar" data-i18n="arabic"></option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="country" data-i18n="defaultCountry"></label>
+              <select id="country"></select>
+              <small data-i18n="defaultCountryHint"></small>
+            </div>
+          </div>
+        </section>
+
+        <section class="settings-card">
+          <div class="card-heading">
+            <span class="step">02</span>
+            <div><h2 data-i18n="callHandler"></h2></div>
+          </div>
+          <div class="field-grid two">
+            <div class="field">
+              <label for="call-handler" data-i18n="callHandler"></label>
+              <select id="call-handler">
+                <option value="tel" data-i18n="handlerTel"></option>
+                <option value="sip" data-i18n="handlerSip"></option>
+                <option value="custom" data-i18n="handlerCustom"></option>
+                <option value="copy" data-i18n="handlerCopy"></option>
+              </select>
+            </div>
+            <div class="field" id="call-template-field" hidden>
+              <label for="call-template" data-i18n="customTemplate"></label>
+              <input type="text" id="call-template" dir="ltr" placeholder="https://dialer.example/call?number={e164}">
+              <small data-i18n="templateHint"></small>
+              <small class="error" id="call-template-error" data-i18n="invalidTemplate" hidden></small>
+            </div>
+            <div class="field">
+              <label for="message-handler" data-i18n="messageHandler"></label>
+              <select id="message-handler">
+                <option value="sms" data-i18n="handlerSms"></option>
+                <option value="custom" data-i18n="handlerCustom"></option>
+                <option value="copy" data-i18n="handlerCopy"></option>
+              </select>
+            </div>
+            <div class="field" id="message-template-field" hidden>
+              <label for="message-template" data-i18n="customTemplate"></label>
+              <input type="text" id="message-template" dir="ltr" placeholder="https://messages.example/new?to={e164}">
+              <small data-i18n="templateHint"></small>
+              <small class="error" id="message-template-error" data-i18n="invalidTemplate" hidden></small>
+            </div>
+          </div>
+        </section>
+
+        <section class="settings-card">
+          <div class="card-heading">
+            <span class="step">03</span>
+            <div><h2 data-i18n="clickBehavior"></h2></div>
+          </div>
+          <div class="choice-grid">
+            <label class="choice"><input type="radio" name="activation" value="preview"><span data-i18n="previewMode"></span></label>
+            <label class="choice"><input type="radio" name="activation" value="instant"><span data-i18n="instantMode"></span></label>
+          </div>
+          <label class="toggle-row">
+            <div><strong data-i18n="highlight"></strong></div>
+            <span class="switch"><input type="checkbox" id="highlight"><span class="switch-track"></span></span>
+          </label>
+        </section>
+
+        <section class="settings-card">
+          <div class="card-heading">
+            <span class="step">04</span>
+            <div><h2 data-i18n="blocklist"></h2><p data-i18n="blocklistHint"></p></div>
+          </div>
+          <textarea id="blocklist" dir="ltr" placeholder="+12025550147&#10;+442079460958"></textarea>
+        </section>
+
+        <section class="settings-card">
+          <div class="card-heading">
+            <span class="step">05</span>
+            <div><h2 data-i18n="automaticSites"></h2></div>
+          </div>
+          <div id="site-list" class="site-list"></div>
+          <p id="no-sites" class="hint" data-i18n="noAutomaticSites"></p>
+        </section>
+
+        <div class="form-actions">
+          <button type="submit" class="button primary" data-i18n="save"></button>
+          <button type="button" class="button danger" id="reset-button" data-i18n="reset"></button>
+          <span class="save-status" id="save-status" role="status" data-i18n="saved" hidden></span>
+        </div>
+      </form>
+
+      <aside class="privacy-note">
+        <div class="privacy-icon" aria-hidden="true">✓</div>
+        <div><h2 data-i18n="privacyTitle"></h2><p data-i18n="privacyBody"></p></div>
+      </aside>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

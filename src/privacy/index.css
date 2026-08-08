@@ -1,0 +1,10 @@
+body { min-height: 100vh; }
+.topbar { display: flex; min-height: 76px; align-items: center; justify-content: space-between; padding: 15px max(22px, calc((100vw - 780px) / 2)); border-bottom: 1px solid var(--soft-line); background: #fff; }
+.privacy-shell { width: min(720px, calc(100% - 34px)); margin: 52px auto 90px; }
+.privacy-shell h1 { margin: 18px 0 3px; font-size: clamp(32px, 6vw, 46px); letter-spacing: -.045em; }
+.updated { margin: 0; color: var(--faint); font-size: 12px; }
+.summary { margin: 26px 0; padding: 21px; border: 1px solid #cde9e4; border-radius: 15px; background: #f2fbf9; color: #285e58; font-size: 16px; }
+.privacy-shell section { padding: 22px 0; border-top: 1px solid var(--line); }
+.privacy-shell section h2 { margin: 0 0 7px; font-size: 18px; }
+.privacy-shell section p { margin: 0; color: var(--muted); }
+@media (max-width: 560px) { .brand-tagline { display: none; } .topbar { padding-inline: 16px; } }

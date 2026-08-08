@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to DialGlide</title>
+    <link rel="stylesheet" href="../shared/ui.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <main class="onboarding-shell">
+      <section class="hero">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">DG</div>
+          <div><p class="brand-name">DialGlide</p><p class="brand-tagline" data-i18n="tagline"></p></div>
+        </div>
+        <div class="hero-copy">
+          <span class="eyebrow" data-i18n="onboardingEyebrow"></span>
+          <h1 data-i18n="onboardingTitle"></h1>
+          <p data-i18n="onboardingBody"></p>
+        </div>
+        <div class="feature-grid">
+          <article><span>↗</span><h2 data-i18n="featureUniversal"></h2><p data-i18n="featureUniversalBody"></p></article>
+          <article><span>ع</span><h2 data-i18n="featureArabic"></h2><p data-i18n="featureArabicBody"></p></article>
+          <article><span>✓</span><h2 data-i18n="featurePrivate"></h2><p data-i18n="featurePrivateBody"></p></article>
+        </div>
+      </section>
+
+      <section class="setup-card" id="setup-card">
+        <span class="pill" data-i18n="privateLocal"></span>
+        <h2 data-i18n="chooseBasics"></h2>
+        <p class="setup-intro" data-i18n="chooseBasicsBody"></p>
+        <form id="onboarding-form">
+          <div class="field">
+            <label for="locale" data-i18n="language"></label>
+            <select id="locale">
+              <option value="auto" data-i18n="automatic"></option>
+              <option value="en" data-i18n="english"></option>
+              <option value="ar" data-i18n="arabic"></option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="country" data-i18n="defaultCountry"></label>
+            <select id="country"></select>
+            <small data-i18n="defaultCountryHint"></small>
+          </div>
+          <div class="field">
+            <label for="handler" data-i18n="callHandler"></label>
+            <select id="handler">
+              <option value="tel" data-i18n="handlerTel"></option>
+              <option value="sip" data-i18n="handlerSip"></option>
+              <option value="copy" data-i18n="handlerCopy"></option>
+            </select>
+          </div>
+          <button class="button primary wide" type="submit" data-i18n="finishSetup"></button>
+        </form>
+      </section>
+
+      <section class="setup-card done" id="done-card" hidden>
+        <div class="done-icon" aria-hidden="true">✓</div>
+        <h2 data-i18n="setupDone"></h2>
+        <p data-i18n="setupDoneBody"></p>
+        <button class="button primary wide" type="button" id="close-button" data-i18n="closeTab"></button>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

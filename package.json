@@ -1,0 +1,40 @@
+{
+  "name": "dialglide-extension",
+  "version": "1.0.4",
+  "private": true,
+  "type": "module",
+  "description": "Privacy-first, provider-neutral click-to-call Chrome extension.",
+  "license": "MPL-2.0",
+  "homepage": "https://receive-smss.live/tools/dialglide/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/receive-sms-live/dialglide.git"
+  },
+  "bugs": {
+    "url": "https://github.com/receive-sms-live/dialglide/issues"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build:core && npm run build:extension",
+    "build:core": "node scripts/build-core.mjs",
+    "build:extension": "node scripts/build.mjs",
+    "audit:public": "node scripts/audit-public.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/test.mjs",
+    "validate:dist": "node scripts/validate-dist.mjs",
+    "validate:core": "node scripts/validate-core-package.mjs",
+    "pack:core": "npm pack --dry-run --workspace dialglide",
+    "verify": "npm run audit:public && npm run typecheck && npm test && npm run build && npm run validate:dist && npm run validate:core"
+  },
+  "dependencies": {
+    "libphonenumber-js": "1.13.10"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.2.5",
+    "@types/node": "26.1.2",
+    "esbuild": "0.28.1",
+    "typescript": "7.0.2"
+  }
+}

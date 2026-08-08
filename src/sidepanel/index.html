@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DialGlide</title>
+    <link rel="stylesheet" href="../shared/ui.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <header class="panel-header">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">DG</div>
+        <div>
+          <p class="brand-name">DialGlide</p>
+          <p class="brand-tagline" data-i18n="tagline"></p>
+        </div>
+      </div>
+      <span class="pill" data-i18n="privateLocal"></span>
+    </header>
+
+    <main>
+      <section class="site-card" id="site-card">
+        <div class="site-heading">
+          <div class="site-icon" id="site-icon" aria-hidden="true">●</div>
+          <div class="site-copy">
+            <span class="eyebrow" data-i18n="currentPage"></span>
+            <strong id="site-name" data-i18n="pageUnavailable"></strong>
+          </div>
+          <button class="button small" type="button" id="scan-button" data-i18n="scanPage"></button>
+        </div>
+        <div class="site-access" id="site-access">
+          <div>
+            <strong data-i18n="enableSite"></strong>
+            <p data-i18n="enableSiteHint"></p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="site-toggle" aria-label="Enable automatically on this site">
+            <span class="switch-track"></span>
+          </label>
+        </div>
+        <p class="inline-error" id="access-error" hidden></p>
+      </section>
+
+      <section class="restricted-state" id="restricted-state" hidden>
+        <div class="state-icon" aria-hidden="true">⌁</div>
+        <h1 data-i18n="restrictedTitle"></h1>
+        <p data-i18n="restrictedBody"></p>
+      </section>
+
+      <section id="results-section" hidden>
+        <div class="results-bar">
+          <strong id="result-count"></strong>
+          <label class="search-wrap">
+            <span class="sr-only" data-i18n="searchNumbers"></span>
+            <input type="search" id="search" data-i18n-placeholder="searchNumbers" autocomplete="off">
+          </label>
+        </div>
+        <div class="number-list" id="number-list"></div>
+      </section>
+
+      <section class="empty-state" id="empty-state" hidden>
+        <div class="state-icon" aria-hidden="true">⌕</div>
+        <h1 data-i18n="emptyTitle"></h1>
+        <p data-i18n="emptyBody"></p>
+      </section>
+
+      <section class="loading-state" id="loading-state">
+        <span class="spinner" aria-hidden="true"></span>
+        <span data-i18n="scanning"></span>
+      </section>
+    </main>
+
+    <footer class="panel-footer">
+      <div>
+        <button class="footer-link" id="settings-button" type="button" data-i18n="settings"></button>
+        <span aria-hidden="true">·</span>
+        <button class="footer-link" id="privacy-button" type="button" data-i18n="privacy"></button>
+      </div>
+      <small data-i18n="noAccount"></small>
+    </footer>
+
+    <div class="panel-toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="index.js"></script>
+  </body>
+</html>

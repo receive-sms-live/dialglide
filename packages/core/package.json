@@ -1,0 +1,54 @@
+{
+  "name": "dialglide",
+  "version": "0.1.0",
+  "description": "Privacy-first phone number detection and normalization for JavaScript and TypeScript.",
+  "type": "module",
+  "license": "MPL-2.0",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "keywords": [
+    "phone-number",
+    "phone-number-parser",
+    "click-to-call",
+    "international-phone-number",
+    "arabic-digits",
+    "typescript",
+    "libphonenumber"
+  ],
+  "homepage": "https://github.com/receive-sms-live/dialglide#dialglide-core",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/receive-sms-live/dialglide.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/receive-sms-live/dialglide/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node ../../scripts/build-core.mjs",
+    "prepack": "npm run build && node ../../scripts/validate-core-package.mjs"
+  },
+  "dependencies": {
+    "libphonenumber-js": "1.13.10"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

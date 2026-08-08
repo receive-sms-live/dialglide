@@ -1,0 +1,25 @@
+name: Feature request
+description: Suggest a focused improvement consistent with DialGlide's single purpose.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: privacy
+    attributes:
+      label: Permission and privacy impact
+      description: State whether this needs new permissions, network access, or stored data.
+    validations:
+      required: true
