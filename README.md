@@ -1,6 +1,7 @@
 # DialGlide
 
 [![CI](https://github.com/receive-sms-live/dialglide/actions/workflows/ci.yml/badge.svg)](https://github.com/receive-sms-live/dialglide/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/dialglide.svg)](https://www.npmjs.com/package/dialglide)
 [![MPL-2.0](https://img.shields.io/badge/license-MPL--2.0-blue.svg)](LICENSE)
 
 DialGlide is a privacy-first, provider-neutral Click-to-Call Chrome extension. It finds phone numbers on regular webpages and lets the user call, message, copy, or open them in a configured dialer.
@@ -45,7 +46,7 @@ The unpacked extension is generated in `dist/`. Load that directory from `chrome
 
 ## DialGlide Core
 
-The package source is in [`packages/core`](packages/core). After publication it can be installed with:
+The package source is in [`packages/core`](packages/core). DialGlide Core is published on [npm](https://www.npmjs.com/package/dialglide) and can be installed with:
 
 ```sh
 npm install dialglide
@@ -73,7 +74,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request. Do not in
 
 DialGlide إضافة مفتوحة المصدر لمتصفح Chrome تكتشف أرقام الهاتف محليًا داخل صفحات الويب، ثم تتيح الاتصال أو إرسال رسالة أو نسخ الرقم باستخدام التطبيق الذي يختاره المستخدم. لا تحتوي الإضافة على حسابات أو إعلانات أو تحليلات أو تتبع أو كود بعيد.
 
-توجد داخل المستودع أيضًا مكتبة **DialGlide Core** لاكتشاف أرقام الهاتف وتوحيد الأرقام العربية والفارسية واللاتينية وتنسيق الأرقام المحلية والدولية.
+توجد داخل المستودع أيضًا مكتبة **DialGlide Core** لاكتشاف أرقام الهاتف وتوحيد الأرقام العربية والفارسية واللاتينية وتنسيق الأرقام المحلية والدولية، وهي متاحة الآن على [npm](https://www.npmjs.com/package/dialglide).
 
 ## License and trademarks
 
