@@ -46,7 +46,7 @@
     "prepack": "npm run build && node ../../scripts/validate-core-package.mjs"
   },
   "dependencies": {
-    "libphonenumber-js": "1.13.10"
+    "libphonenumber-js": "1.13.11"
   },
   "publishConfig": {
     "access": "public"
